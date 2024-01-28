@@ -3,9 +3,9 @@
  * (if there's no file fileToRead.txt Error with message 
  * FS operation failed must be thrown)
  */
-import { readFile } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { readFile } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 const read = async () => {

@@ -1,14 +1,14 @@
 // rewrite it to it's equivalent in ECMAScript notation (and rename it to esm.mjs)
 
-import { sep, dirname } from 'path';
-import { release, version } from 'os';
-import { createServer as createServerHttp } from 'http';
+import { sep, dirname } from 'node:path';
+import { release, version } from 'node:os';
+import { createServer as createServerHttp } from 'node:http';
 import './files/c.js';
 
-import { createRequire } from "module";
+import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 
-import { fileURLToPath } from 'url';
+import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 

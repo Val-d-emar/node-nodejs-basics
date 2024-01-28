@@ -11,10 +11,10 @@
  * data - value from worker in case of success or null in case of error in worker
  * The results in the array must be in the same order that the workers were created
  */
-import { cpus } from 'os';
-import { Worker } from 'worker_threads';
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { cpus } from 'node:os';
+import { Worker } from 'node:worker_threads';
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 const performCalculations = async () => {

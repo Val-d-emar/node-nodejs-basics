@@ -2,11 +2,11 @@
  *  implement function that calculates SHA256 hash for file fileToCalculateHashFor.txt 
  * and logs it into console as hex using Streams API
  */
-import { createReadStream } from 'fs';
-import { createHash } from 'crypto';
-import { stdout } from 'process';
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { createReadStream } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { stdout } from 'node:process';
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 
 const dir = dirname(fileURLToPath(import.meta.url));
 

@@ -7,10 +7,10 @@
  * child process stdout should send data to master process stdout
  */
 
-import { spawn } from 'child_process';
-import { argv0, stdout, stdin } from 'process';
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { spawn } from 'node:child_process';
+import { argv0, stdout, stdin } from 'node:process';
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 const spawnChildProcess = async (args) => {

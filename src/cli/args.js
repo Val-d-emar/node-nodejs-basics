@@ -3,7 +3,7 @@
  * --propName value --prop2Name value2, you don't need to validate it) 
  * and prints them to the console in the format propName is value, prop2Name is value2
  */
-import process from 'process';
+import process from 'node:process';
 const parseArgs = () => {
     // Write your code here 
     let str = '';

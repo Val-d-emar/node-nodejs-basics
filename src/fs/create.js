@@ -4,9 +4,9 @@
  * with message 'FS operation failed' must be thrown) 
  * */
 
-import { access, constants, writeFile } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { access, constants, writeFile } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 const create = async () => {

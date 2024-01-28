@@ -3,9 +3,9 @@
  * (if there's no file wrongFilename.txt or properFilename.md already exists Error with message 
  * FS operation failed must be thrown)
  */
-import { access, rename as renameFile, constants } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { access, rename as renameFile, constants } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 const rename = async () => {

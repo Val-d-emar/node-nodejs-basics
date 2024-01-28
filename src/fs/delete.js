@@ -2,9 +2,9 @@
  * implement function that deletes file fileToRemove.txt 
  * (if there's no file fileToRemove.txt Error with message FS 
 */
-import { unlink, copyFile } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { unlink } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 const remove = async () => {

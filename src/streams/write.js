@@ -2,10 +2,10 @@
  * implement function that writes process.stdin data into file 
  * fileToWrite.txt content using Writable Stream
  */
-import { createWriteStream } from 'fs';
-import { stdin } from 'process';
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { createWriteStream } from 'node:fs';
+import { stdin } from 'node:process';
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 const write = async () => {

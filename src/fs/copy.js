@@ -3,9 +3,9 @@
 * folder files_copy at the same level (if files folder doesn't exists or files_copy has 
 * already been created Error with message 'FS operation failed' must be thrown)
 */
-import { readdir, mkdir, copyFile } from 'fs';
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { readdir, mkdir, copyFile } from 'node:fs';
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 const copy = async () => {

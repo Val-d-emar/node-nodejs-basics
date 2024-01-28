@@ -2,9 +2,9 @@
  * implement function that reads data from process.stdin, 
  * reverses text using Transform Stream and then writes it into process.stdout
  */
-import { EOL } from 'os';
-import { stdin, stdout } from 'process';
-import { Transform } from 'stream';
+import { EOL } from 'node:os';
+import { stdin, stdout } from 'node:process';
+import { Transform } from 'node:stream';
 
 const transform = async () => {
     // Write your code here 

@@ -3,10 +3,10 @@
  * Readable Stream and prints it's content into process.stdout
  */
 
-import { createReadStream } from 'fs';
-import { stdout } from 'process';
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { createReadStream } from 'node:fs';
+import { stdout } from 'node:process';
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 const read = async () => {

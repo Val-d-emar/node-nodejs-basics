@@ -1,10 +1,10 @@
 /**
  * implement function that compresses file fileToCompress.txt to archive.gz using zlib and Streams API
  */
-import { access, constants, createReadStream, createWriteStream } from 'fs';
-import { createGzip } from "zlib";
-import { fileURLToPath } from 'url';
-import { dirname, normalize } from 'path';
+import { access, constants, createReadStream, createWriteStream } from 'node:fs';
+import { createGzip } from "node:zlib";
+import { fileURLToPath } from 'node:url';
+import { dirname, normalize } from 'node:path';
 const dir = dirname(fileURLToPath(import.meta.url));
 
 const compress = async () => {
