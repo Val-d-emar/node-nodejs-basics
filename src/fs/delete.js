@@ -10,7 +10,6 @@ const dir = dirname(fileURLToPath(import.meta.url));
 const remove = async () => {
     // Write your code here 
     let src = normalize(dir + '/files/fileToRemove.txt');
-    // copyFile(src, src+'.0', (err) => {if (err) throw err;});
     unlink(src, (err) => {
         if (err) {
             if (err.code === 'ENOENT') {
@@ -18,8 +17,6 @@ const remove = async () => {
             } else {
                 throw err;
             }            
-        } else {
-                // console.log('OK');
         }
     });
 };

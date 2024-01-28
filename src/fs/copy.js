@@ -25,7 +25,6 @@ const copy = async () => {
                         for (let f of files) {
                             copyFile(normalize(`${src}//${f}`), normalize(`${dst}//${f}`), (err) => {
                                 if (err) throw err;
-                                // console.log(f);
                             });
                         }
                     }

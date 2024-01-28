@@ -15,7 +15,6 @@ const dir = dirname(fileURLToPath(import.meta.url));
 
 const spawnChildProcess = async (args) => {
     // Write your code here
-    // console.log(args);
     if (typeof (args) === 'undefined') {
         args = [];
     } else if (!args instanceof Array) {
@@ -30,4 +29,4 @@ const spawnChildProcess = async (args) => {
 
 // Put your arguments in function call to test this functionality
 spawnChildProcess( /* [someArgument1, someArgument2, ...] */);
-// spawnChildProcess(['someArgument1', 'someArgument2', 3, 44, 555]);
+

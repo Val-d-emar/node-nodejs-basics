@@ -17,18 +17,8 @@ const random = Math.random();
 let unknownObject;
 
 if (random > 0.5) {
-    // await import('./files/a.json', {
-    //     assert: {
-    //         type: "json",
-    //     },
-    // }).then( val => unknownObject = val.default);
     unknownObject = require('./files/a.json');
 } else {
-    // await import('./files/b.json', {
-    //     assert: {
-    //         type: "json",
-    //     },
-    // }).then( val => unknownObject = val.default);
     unknownObject = require('./files/b.json');
 }
 
