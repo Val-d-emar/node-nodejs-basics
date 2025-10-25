@@ -3,7 +3,7 @@
 import { sep, dirname } from 'node:path';
 import { release, version } from 'node:os';
 import { createServer as createServerHttp } from 'node:http';
-import './files/c.js';
+import './files/c.cjs';
 
 import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
@@ -36,7 +36,7 @@ myServer.listen(PORT, () => {
   console.log('To terminate it, use Ctrl+C combination');
 });
 
-module.exports = {
-    unknownObject,
-    myServer,
+export default {
+  unknownObject,
+  myServer,
 };
