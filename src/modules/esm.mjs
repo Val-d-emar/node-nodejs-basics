@@ -1,8 +1,16 @@
-const path = require('node:path');
-const { release, version } = require('node:os');
-const { createServer: createServerHttp } = require('node:http');
+// rewrite it to it's equivalent in ECMAScript notation (and rename it to esm.mjs)
 
-require('./files/c.cjs');
+import { sep, dirname } from 'node:path';
+import { release, version } from 'node:os';
+import { createServer as createServerHttp } from 'node:http';
+import './files/c.cjs';
+
+import { createRequire } from "node:module";
+const require = createRequire(import.meta.url);
+
+import { fileURLToPath } from 'node:url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const random = Math.random();
 
@@ -10,7 +18,7 @@ const unknownObject = random > 0.5 ? require('./files/a.json') : require('./file
 
 console.log(`Release ${release()}`);
 console.log(`Version ${version()}`);
-console.log(`Path segment separator is "${path.sep}"`);
+console.log(`Path segment separator is "${sep}"`);
 
 console.log(`Path to current file is ${__filename}`);
 console.log(`Path to current directory is ${__dirname}`);
@@ -28,7 +36,7 @@ myServer.listen(PORT, () => {
   console.log('To terminate it, use Ctrl+C combination');
 });
 
-module.exports = {
+export default {
   unknownObject,
   myServer,
 };

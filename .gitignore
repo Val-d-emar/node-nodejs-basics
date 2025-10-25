@@ -1,0 +1,8 @@
+# This file is used to ignore files which are generated
+# ----------------------------------------------------------------------------
+*.code-workspace
+.vscode/
+**/files/
+**/test_dir/
+**/files_copy/
+**/*test*.js
